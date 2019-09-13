@@ -1,0 +1,15 @@
+title Exercise 0.6 on https://www.websequencediagrams.com/
+
+
+note over browser:
+User inputs note
+and click save 
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+server-->browser: {"message":"note created"}
+
+note over browser:
+note gets added to data.json & we 
+add  note to list via client side
+end note

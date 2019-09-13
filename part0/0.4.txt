@@ -1,0 +1,24 @@
+title Exercise 0.4 on https://www.websequencediagrams.com/
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+server-->browser: HTML code
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server-->browser: CSS code
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+server-->browser: JavaScript code
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server-->browser: Data in JSON Format [{"content":"HTML is easy"...]
+
+note right of browser:
+user inputs note in note in
+input field and click save
+end note
+
+browser->server:Form POST https://fullstack-exampleapp.herokuapp.com/new_note: note=note data
+server-->browser: note gets added to data.json file and page is refreshed
