@@ -9,9 +9,9 @@
     "react-scripts": "3.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "server": "json-server -p3001 db.json",
-    "dev": "npm-run-all -p start server",
+    "frontend:dev": "react-scripts start",
+    "backend:dev": "json-server -p3001 db.json",
+    "start": "npm-run-all -p frontend:dev backend:dev",
     "build": "react-scripts build"
   },
   "eslintConfig": {
